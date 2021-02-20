@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <script src="./index.js" ></script>
+</head>
+<body>
+    <div>
+        <!-- Create an object of student with firstname, lastname, age , gender, rollno and dob.
+Add a field occupation to the object with an input value from user.
+Create a Get Button which when clicked with an input of roll no. shows the student
+details. -->
+
+    <form onsubmit="{return false}">
+        <label >First Name</label>
+        <input  required type="text" id="fname" name="fname"><br><br>
+
+        <label >Last Name</label>
+        <input  required type="text" id="lname" name="lname"><br><br>
+
+        <label >Age</label>
+        <input  required type="number" id="age" name="age"><br><br>
+
+        <label>Gender</label> <br>
+        <input required type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input required type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <br>
+        <label >Roll Number</label>
+        <input  required type="text" id="roll" name="roll"><br><br>
+
+        <label >DOB</label>
+        <input  required type="date" id="dob" name="dob"><br><br>
+
+        <label >Occupation</label>
+        <input  required type="text" id="occ" name="occ"><br><br>
+        <button onclick="store()">Submit</button>
+
+        <br><br>
+
+        <label >Enter roll number to retrieve details: </label>
+        <input   type="text" id="rno" name="rno"><br><br>
+        <button onclick="retrieve()">Submit</button>
+        <br><br>
+        <label id ="details" ></label>
+      </form>
+      
+    </div>
+</body>
+</html>
