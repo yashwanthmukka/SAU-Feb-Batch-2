@@ -1,0 +1,36 @@
+.details{
+    display:flex;
+    flex:1;
+    flex-direction: row;
+    background:linear-gradient(to left, #0F2027 ,#203A43,#2C5364);
+}   
+
+.details-image{
+    width:40vw;
+    height:100vh;
+}
+
+.details-body{
+    padding:30px;
+    color:white;
+}
+.details-image > p{
+    font-size: small;
+}
+
+.description{
+    padding:10px;
+    border: 1px solid teal;
+    font-style: normal ;
+    line-height: 2;
+}
+
+.title{
+    font-size:xx-large;
+    color: white;
+    font-weight: bolder;
+}
+
+.price{
+    font: 1em sans-serif;
+}

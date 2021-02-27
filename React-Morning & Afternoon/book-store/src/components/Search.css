@@ -1,0 +1,19 @@
+.search{
+    border:none;
+    outline: none;
+    border: 2px solid teal;
+    padding:20px;
+    display:flex;
+    flex:1;
+    width:'50%';  
+    font-size: 20px;
+    margin-right: 10px;
+}
+.btn{
+    padding:20px; 
+    border:none;
+    outline: none;
+    border:2px solid teal;
+    background-color:transparent;
+    font-size: large;
+}
