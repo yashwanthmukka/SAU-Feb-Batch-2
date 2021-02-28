@@ -1,0 +1,23 @@
+.mukka-body{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.mukka-table{
+    width:45vw;
+    margin:1px solid black ;
+}
+
+
+.mukka-form{
+    width:45vw;
+    border-right: 1px solid teal;
+    padding-right: 20px;
+}
+
+.mukka-delete{
+    width:30vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+}
