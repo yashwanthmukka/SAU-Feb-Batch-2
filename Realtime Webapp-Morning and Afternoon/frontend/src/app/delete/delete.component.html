@@ -1,0 +1,20 @@
+<div class="card mat-elevation-z8 p-5" style="width: 18rem;     margin: 21px;">
+  <div class="card-body">
+    <h2>{{ selectedSessionDetails.name }}</h2>
+    <h4> {{ selectedSessionDetails.InsName }}</h4>
+    <h4> {{ selectedSessionDetails.desc }}</h4>
+
+  </div>
+
+</div>
+
+
+<button class="noOutlinebutton mat-elevation-z10 ml-5 mat-card-footer" mat-raised-button color="Basic" [routerLink]="['/Dashboard']">
+  <mat-icon>keyboard_backspace</mat-icon> Back
+</button> |
+
+<button class="noOutlinebutton mat-elevation-z10 mat-card-footer mb-0" mat-raised-button color="warn"
+  (click)="OnDeletesessionConfirm()">
+  <mat-icon>done_all</mat-icon>
+  Add
+</button>

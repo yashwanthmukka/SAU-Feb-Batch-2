@@ -1,0 +1,35 @@
+
+<div class="mt-5 m-5 mat-elevation-z8 p-5">
+<form class="example-form mat-elevation-z8 p-5" [formGroup]="sessionForm">
+  <mat-form-field >
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="Name">
+    <mat-error *ngIf="sessionForm.get('Name')?.errors?.error"> {{ sessionForm.get('Name')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field >
+    <mat-label>InsName</mat-label>
+    <input matInput formControlName="InsName">
+    <mat-error *ngIf="sessionForm.get('InsName')?.errors?.error"> {{ sessionForm.get('InsName')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>desc</mat-label>
+    <textarea matInput formControlName="desc" cdkTextareaAutosize
+    cdkAutosizeMinRows="1"
+    cdkAutosizeMaxRows="5">
+    <mat-error *ngIf="sessionForm.get('desc')?.errors?.error"> {{ sessionForm.get('desc')?.errors?.error }}</mat-error></textarea>
+  </mat-form-field>
+
+</form>
+
+<button class="noOutlinebutton mat-elevation-z10 mt-4" mat-raised-button color="basic" [routerLink]="['/Dashboard']">
+  <mat-icon>keyboard_backspace</mat-icon>
+  Back
+  </button>
+  ||
+  <button class="noOutlinebutton mat-elevation-z10 mt-4" mat-raised-button color="basic" [disabled]="sessionForm.invalid" (click)="OnUpdate()">
+    <mat-icon>check_circle</mat-icon>
+    Update Changes
+    </button>
+  </div>

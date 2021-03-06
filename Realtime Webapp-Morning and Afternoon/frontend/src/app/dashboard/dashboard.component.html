@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-0 mt-5">
+    <h2 style="color: rgb(165, 147, 147);">ADD NEW PRODUCT</h2>
+  </div>
+  <div class="col-md-1 mt-5">
+    <button class="noOutlinebutton" mat-raised-button
+      color="basic" [routerLink]="['/Add']">
+      <mat-icon>add</mat-icon> 
+    </button>
+  </div>
+  <div class="col-md-3 mt-5"><h2 style="color: rgb(0, 2, 112);"><button class="noOutlinebutton" mat-raised-button
+    color="basic"><mat-icon>shopping_cart</mat-icon> {{SessionDetails.length}}</button> </h2></div>
+  <div class="col-md-3 mt-5">
+    <app-filter></app-filter>
+  </div>
+
+
+
+</div>
+
+<div class="row">
+
+  <ng-container *ngFor="let item of SessionDetails">
+    <div class="card mat-elevation-z6"  style="width: 18rem;     margin: 21px;"  *ngIf="item.Visibility">
+      <img class="mat-elevation-z12" mat-card-image src="https://i.ibb.co/wRfgPWS/kemal-alkan-BDBEP0e-PQc-unsplash.jpg" alt="Photo">
+      <div class="card-body">
+        <h2>{{ item.name }}</h2>
+        <h4> {{ item.InsName }}</h4>
+        <h4><b> {{ item.desc }} </b></h4>
+        <div id="cardBut">
+          <button class="noOutlinebutton mat-elevation-z10 ml-3" mat-fab color="primary" aria-label="Example icon button with a delete icon" [routerLink]="['/Delete', item.id]">
+            <mat-icon>add_shopping_cart</mat-icon>
+          </button> 
+          <button class="noOutlinebutton mat-elevation-z10 mr-3" mat-fab color="primary" aria-label="Example icon button with a delete icon" [routerLink]="['/Update', item.id]">
+            <mat-icon>zoom_in</mat-icon>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </ng-container>
+
+
+
+
+</div>
+

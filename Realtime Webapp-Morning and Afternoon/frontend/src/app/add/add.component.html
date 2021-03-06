@@ -1,0 +1,36 @@
+<div class="container h-100 mt-5">
+  <div class="row h-100 justify-content-center align-items-center">
+    
+<form class="example-form col-4 mat-elevation-z8 p-5" [formGroup]="sessionForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Product Name</mat-label>
+    <input matInput formControlName="Name">
+    <mat-error *ngIf="sessionForm.get('Name')?.errors?.error"> {{ sessionForm.get('Name')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Price</mat-label>
+    <input matInput formControlName="InsName">
+    <mat-error *ngIf="sessionForm.get('InsName')?.errors?.error"> {{ sessionForm.get('InsName')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="desc"></textarea>
+    <mat-error *ngIf="sessionForm.get('desc')?.errors?.error"> {{ sessionForm.get('desc')?.errors?.error }}</mat-error>
+  </mat-form-field>
+  <hr>
+  <p><b>Fill all the fields then the submit button will pop out.</b></p>
+
+</form>
+
+<button class="noOutlinebutton ml-5 mat-elevation-z10" mat-raised-button color="primary" [routerLink]="['/Dashboard']">
+  <mat-icon>keyboard_backspace</mat-icon>
+  Back
+  </button> ||
+  <button class="noOutlinebutton mat-elevation-z10" mat-raised-button color="accent" [disabled]="sessionForm.invalid" (click)="addSession()">
+    <mat-icon>note_add</mat-icon>
+    Add Session
+    </button>
+    </div>
+  </div>
