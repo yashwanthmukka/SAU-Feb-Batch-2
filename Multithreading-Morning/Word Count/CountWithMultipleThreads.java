@@ -13,8 +13,8 @@ public static void main(String[] args) {
 	
 	
 	 
-    Thread thread1 = new Thread(new CountingThread(input));
-    Thread thread2 = new Thread(new CountingThread(input));
+    Thread thread1 = new Thread(new CountingThread(input.substring(0,input.length()/2));
+    Thread thread2 = new Thread(new CountingThread(input.substring(input.length()/2+1,input.length()));
     
     
     thread1.start();
